@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import social1 from "@/assets/social-1.jpg";
 import social2 from "@/assets/social-2.jpg";
@@ -11,6 +11,8 @@ import brand1 from "@/assets/brand-1.jpg";
 import brand2 from "@/assets/brand-2.jpg";
 import brand3 from "@/assets/brand-3.jpg";
 import brand4 from "@/assets/brand-4.jpg";
+import ai1 from "@/assets/ai-1.jpg";
+import ai2 from "@/assets/ai-2.jpg";
 
 const tabs = [
   { id: "social", label: "Social Media & Print Designs" },
@@ -26,6 +28,11 @@ const socialImages = [
   { src: social5, title: "Event Design" },
 ];
 
+const aiImages = [
+  { src: ai1, title: "Darora Royal Group Dashboard" },
+  { src: ai2, title: "KinderJoy Islamic School App" },
+];
+
 const brandImages = [
   { src: brand1, title: "M.A.O College Identity" },
   { src: brand2, title: "Al Ishraq Signage" },
@@ -38,7 +45,7 @@ const PortfolioSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const activeImages = activeTab === "social" ? socialImages : activeTab === "brand" ? brandImages : [];
+  const activeImages = activeTab === "social" ? socialImages : activeTab === "brand" ? brandImages : activeTab === "ai" ? aiImages : [];
 
   const goNext = () => {
     setDirection(1);
@@ -123,7 +130,7 @@ const PortfolioSection = () => {
 
         {/* Content area */}
         <AnimatePresence mode="wait">
-          {(activeTab === "social" || activeTab === "brand") && activeImages.length > 0 && (
+          {(activeTab === "social" || activeTab === "brand" || activeTab === "ai") && activeImages.length > 0 && (
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}
@@ -225,26 +232,6 @@ const PortfolioSection = () => {
             </motion.div>
           )}
 
-          {activeTab === "ai" && (
-            <motion.div
-              key="ai"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col items-center justify-center py-20"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6">
-                <ImageIcon className="w-8 h-8 text-blue-400/50" />
-              </div>
-              <p className="text-white/30 text-lg font-medium mb-2">
-                Coming Soon
-              </p>
-              <p className="text-white/15 text-sm font-light">
-                AI apps and website projects will be added here
-              </p>
-            </motion.div>
-          )}
         </AnimatePresence>
       </div>
     </section>
