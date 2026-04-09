@@ -7,6 +7,10 @@ import social2 from "@/assets/social-2.jpg";
 import social3 from "@/assets/social-3.jpg";
 import social4 from "@/assets/social-4.jpg";
 import social5 from "@/assets/social-5.jpg";
+import brand1 from "@/assets/brand-1.jpg";
+import brand2 from "@/assets/brand-2.jpg";
+import brand3 from "@/assets/brand-3.jpg";
+import brand4 from "@/assets/brand-4.jpg";
 
 const tabs = [
   { id: "social", label: "Social Media & Print Designs" },
@@ -22,20 +26,29 @@ const socialImages = [
   { src: social5, title: "Event Design" },
 ];
 
+const brandImages = [
+  { src: brand1, title: "M.A.O College Identity" },
+  { src: brand2, title: "Al Ishraq Signage" },
+  { src: brand3, title: "Crown Collection Parfum" },
+  { src: brand4, title: "Darora Packaging" },
+];
+
 const PortfolioSection = () => {
   const [activeTab, setActiveTab] = useState("social");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
+  const activeImages = activeTab === "social" ? socialImages : activeTab === "brand" ? brandImages : [];
+
   const goNext = () => {
     setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % socialImages.length);
+    setCurrentIndex((prev) => (prev + 1) % activeImages.length);
   };
 
   const goPrev = () => {
     setDirection(-1);
     setCurrentIndex(
-      (prev) => (prev - 1 + socialImages.length) % socialImages.length
+      (prev) => (prev - 1 + activeImages.length) % activeImages.length
     );
   };
 
@@ -110,9 +123,9 @@ const PortfolioSection = () => {
 
         {/* Content area */}
         <AnimatePresence mode="wait">
-          {activeTab === "social" && (
+          {(activeTab === "social" || activeTab === "brand") && activeImages.length > 0 && (
             <motion.div
-              key="social"
+              key={activeTab}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -129,16 +142,16 @@ const PortfolioSection = () => {
                 </button>
 
                 {/* Image display */}
-                <div className="relative w-full max-w-lg aspect-[4/5] overflow-hidden rounded-2xl">
+                <div className={`relative w-full max-w-lg overflow-hidden rounded-2xl ${activeTab === "brand" ? "aspect-square" : "aspect-[4/5]"}`}>
                   <AnimatePresence
                     initial={false}
                     custom={direction}
                     mode="wait"
                   >
                     <motion.img
-                      key={currentIndex}
-                      src={socialImages[currentIndex].src}
-                      alt={socialImages[currentIndex].title}
+                      key={`${activeTab}-${currentIndex}`}
+                      src={activeImages[currentIndex].src}
+                      alt={activeImages[currentIndex].title}
                       custom={direction}
                       variants={imageVariants}
                       initial="enter"
@@ -164,7 +177,7 @@ const PortfolioSection = () => {
                   {/* Image counter */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 glass rounded-full px-4 py-1.5">
                     <p className="text-xs text-white/60 font-medium">
-                      {currentIndex + 1} / {socialImages.length}
+                      {currentIndex + 1} / {activeImages.length}
                     </p>
                   </div>
                 </div>
@@ -181,20 +194,20 @@ const PortfolioSection = () => {
               {/* Image title */}
               <AnimatePresence mode="wait">
                 <motion.p
-                  key={currentIndex}
+                  key={`${activeTab}-title-${currentIndex}`}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.25 }}
                   className="text-center text-white/50 text-sm font-medium mt-6"
                 >
-                  {socialImages[currentIndex].title}
+                  {activeImages[currentIndex].title}
                 </motion.p>
               </AnimatePresence>
 
               {/* Dot indicators */}
               <div className="flex items-center justify-center gap-2 mt-4">
-                {socialImages.map((_, i) => (
+                {activeImages.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => {
@@ -229,27 +242,6 @@ const PortfolioSection = () => {
               </p>
               <p className="text-white/15 text-sm font-light">
                 AI apps and website projects will be added here
-              </p>
-            </motion.div>
-          )}
-
-          {activeTab === "brand" && (
-            <motion.div
-              key="brand"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col items-center justify-center py-20"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6">
-                <ImageIcon className="w-8 h-8 text-purple-400/50" />
-              </div>
-              <p className="text-white/30 text-lg font-medium mb-2">
-                Coming Soon
-              </p>
-              <p className="text-white/15 text-sm font-light">
-                Brand identity projects will be added here
               </p>
             </motion.div>
           )}
