@@ -13,26 +13,26 @@ import {
 import AnimatedSection from "./AnimatedSection";
 
 const skills = [
-  { icon: Palette, title: "Adobe Creative Suite", desc: "Photoshop, Illustrator, InDesign" },
-  { icon: PenTool, title: "Canva & Figma", desc: "Design & prototyping" },
-  { icon: FileSpreadsheet, title: "Advanced Excel", desc: "Automation & data analysis" },
-  { icon: MonitorSmartphone, title: "Word / PowerPoint", desc: "Documents & presentations" },
-  { icon: Video, title: "Video Editing", desc: "Production & post-processing" },
-  { icon: Sparkles, title: "Social Media", desc: "Visual identity & strategy" },
-  { icon: Cpu, title: "Hardware & AI", desc: "PC maintenance & AI workflows" },
-  { icon: BookOpen, title: "Curriculum Dev", desc: "E-learning & instruction" },
-  { icon: Globe, title: "Languages", desc: "Malayalam, English, Arabic, Urdu" },
+  { icon: Palette, title: "Adobe Creative Suite", desc: "Photoshop, Illustrator, InDesign", color: "text-blue-400", bg: "bg-blue-500/10" },
+  { icon: PenTool, title: "Canva & Figma", desc: "Design & prototyping", color: "text-purple-400", bg: "bg-purple-500/10" },
+  { icon: FileSpreadsheet, title: "Advanced Excel", desc: "Automation & data analysis", color: "text-emerald-400", bg: "bg-emerald-500/10" },
+  { icon: MonitorSmartphone, title: "Word / PowerPoint", desc: "Documents & presentations", color: "text-orange-400", bg: "bg-orange-500/10" },
+  { icon: Video, title: "Video Editing", desc: "Production & post-processing", color: "text-red-400", bg: "bg-red-500/10" },
+  { icon: Sparkles, title: "Social Media", desc: "Visual identity & strategy", color: "text-pink-400", bg: "bg-pink-500/10" },
+  { icon: Cpu, title: "Hardware & AI", desc: "PC maintenance & AI workflows", color: "text-cyan-400", bg: "bg-cyan-500/10" },
+  { icon: BookOpen, title: "Curriculum Dev", desc: "E-learning & instruction", color: "text-teal-400", bg: "bg-teal-500/10" },
+  { icon: Globe, title: "Languages", desc: "Malayalam, English, Arabic, Urdu", color: "text-indigo-400", bg: "bg-indigo-500/10" },
 ];
 
 const SkillsSection = () => (
   <section id="skills" className="py-20 bg-[#050505]">
     <div className="max-w-6xl mx-auto px-6">
       <AnimatedSection>
-        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/25 mb-3">
+        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-emerald-400/60 mb-3">
           Capabilities
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white mb-14">
-          Skills & Tools
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter mb-14">
+          <span className="gradient-text-green">Skills & Tools</span>
         </h2>
       </AnimatedSection>
 
@@ -44,8 +44,8 @@ const SkillsSection = () => (
               transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
               className="group glass rounded-xl p-5 flex items-center gap-4 hover:bg-white/[0.05] transition-all duration-300"
             >
-              <div className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 group-hover:bg-white/[0.1] transition-colors">
-                <skill.icon className="w-4 h-4 text-white/50" />
+              <div className={`w-9 h-9 rounded-lg ${skill.bg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
+                <skill.icon className={`w-4 h-4 ${skill.color}`} />
               </div>
               <div>
                 <h3 className="font-medium text-white text-sm tracking-tight">

@@ -38,11 +38,11 @@ const ExperienceSection = () => (
   <section id="experience" className="py-20 bg-[#050505]">
     <div className="max-w-6xl mx-auto px-6">
       <AnimatedSection>
-        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/25 mb-3">
+        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-cyan-400/60 mb-3">
           Career
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white mb-14">
-          Experience
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter mb-14">
+          <span className="gradient-text-cool">Experience</span>
         </h2>
       </AnimatedSection>
 
@@ -62,10 +62,10 @@ const ExperienceSection = () => (
                   {exp.period}
                 </span>
               </div>
-              <p className="text-xs text-white/40 font-medium mb-2">
+              <p className="text-xs font-medium gradient-text-cool mb-2">
                 {exp.place}
               </p>
-              <p className="text-white/25 text-sm leading-relaxed font-light">
+              <p className="text-white/30 text-sm leading-relaxed font-light">
                 {exp.desc}
               </p>
             </motion.div>

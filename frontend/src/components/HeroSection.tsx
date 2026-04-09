@@ -17,7 +17,7 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Gradient overlays for text readability */}
+      {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 to-transparent" />
 
@@ -29,7 +29,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
         >
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-4">
-            Mohammed<br />Shafi <span className="text-white/50">TP</span>
+            Mohammed<br />Shafi <span className="gradient-text">TP</span>
           </h1>
         </motion.div>
 

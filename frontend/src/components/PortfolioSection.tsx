@@ -21,11 +21,11 @@ const PortfolioSection = () => (
     <div className="divider-gradient mb-16" />
     <div className="max-w-6xl mx-auto px-6">
       <AnimatedSection>
-        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/25 mb-3">
+        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-orange-400/60 mb-3">
           Selected Work
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white mb-14">
-          Portfolio
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter mb-14">
+          <span className="gradient-text-warm">Portfolio</span>
         </h2>
       </AnimatedSection>
 
@@ -50,6 +50,7 @@ const PortfolioSection = () => (
                   <p className="text-white font-medium text-sm tracking-tight">
                     {work.title}
                   </p>
+                  <p className="text-orange-300/60 text-xs font-light">View Project</p>
                 </div>
               </div>
               <div className="absolute inset-0 rounded-2xl border border-white/[0.04] group-hover:border-white/10 transition-colors duration-400" />

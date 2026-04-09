@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 const stats = [
-  { number: "50+", label: "Projects Delivered" },
-  { number: "70%", label: "Engagement Growth" },
-  { number: "30%", label: "Time Saved" },
-  { number: "69", label: "Colleges Impact" },
+  { number: "50+", label: "Projects Delivered", color: "gradient-text" },
+  { number: "70%", label: "Engagement Growth", color: "gradient-text-warm" },
+  { number: "30%", label: "Time Saved", color: "gradient-text-cool" },
+  { number: "69", label: "Colleges Impact", color: "gradient-text-green" },
 ];
 
 const WhyHireSection = () => (
@@ -20,10 +20,10 @@ const WhyHireSection = () => (
               transition={{ duration: 0.3 }}
               className="text-center"
             >
-              <div className="text-4xl sm:text-5xl font-bold text-white tracking-tighter mb-2">
+              <div className={`text-4xl sm:text-5xl font-bold tracking-tighter mb-2 ${stat.color}`}>
                 {stat.number}
               </div>
-              <p className="text-white/25 text-xs font-medium tracking-wide uppercase">
+              <p className="text-white/30 text-xs font-medium tracking-wide uppercase">
                 {stat.label}
               </p>
             </motion.div>

@@ -9,13 +9,13 @@ const Footer = () => (
           href="https://wa.me/917994724015"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/15 text-xs font-light hover:text-white/40 transition-colors"
+          className="text-white/15 text-xs font-light hover:text-blue-400/60 transition-colors"
         >
           WhatsApp
         </a>
         <a
           href="mailto:mshafisyd@gmail.com"
-          className="text-white/15 text-xs font-light hover:text-white/40 transition-colors"
+          className="text-white/15 text-xs font-light hover:text-blue-400/60 transition-colors"
         >
           Email
         </a>

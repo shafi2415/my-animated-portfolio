@@ -7,10 +7,11 @@ const ContactSection = () => (
     <div className="divider-gradient mb-16" />
     <div className="max-w-6xl mx-auto px-6">
       <AnimatedSection>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tighter text-white mb-3">
-          Let's Work Together
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tighter mb-3">
+          <span className="gradient-text">Let's Work</span>{" "}
+          <span className="text-white">Together</span>
         </h2>
-        <p className="text-white/25 text-base font-light max-w-md mb-12">
+        <p className="text-white/30 text-base font-light max-w-md mb-12">
           Ready to collaborate and create impactful solutions.
         </p>
       </AnimatedSection>
@@ -25,7 +26,9 @@ const ContactSection = () => (
             transition={{ duration: 0.3 }}
             className="group glass rounded-2xl p-6 block hover:bg-white/[0.05] transition-all duration-300"
           >
-            <Phone className="w-5 h-5 text-white/30 mb-4 group-hover:text-white/60 transition-colors" />
+            <div className="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center mb-4">
+              <Phone className="w-4 h-4 text-green-400" />
+            </div>
             <p className="text-[11px] text-white/20 mb-1">WhatsApp</p>
             <p className="font-medium text-white text-sm tracking-tight">
               +91 799 472 4015
@@ -40,7 +43,9 @@ const ContactSection = () => (
             transition={{ duration: 0.3 }}
             className="group glass rounded-2xl p-6 block hover:bg-white/[0.05] transition-all duration-300"
           >
-            <Mail className="w-5 h-5 text-white/30 mb-4 group-hover:text-white/60 transition-colors" />
+            <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+              <Mail className="w-4 h-4 text-blue-400" />
+            </div>
             <p className="text-[11px] text-white/20 mb-1">Email</p>
             <p className="font-medium text-white text-sm tracking-tight">
               mshafisyd@gmail.com
@@ -54,7 +59,9 @@ const ContactSection = () => (
             transition={{ duration: 0.3 }}
             className="glass rounded-2xl p-6 hover:bg-white/[0.05] transition-all duration-300"
           >
-            <MapPin className="w-5 h-5 text-white/30 mb-4" />
+            <div className="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
+              <MapPin className="w-4 h-4 text-purple-400" />
+            </div>
             <p className="text-[11px] text-white/20 mb-1">Location</p>
             <p className="font-medium text-white text-sm tracking-tight">
               Areekode, Malappuram, Kerala
