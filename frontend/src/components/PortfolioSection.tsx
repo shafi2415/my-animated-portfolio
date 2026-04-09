@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import GradientOrbs from "./GradientOrbs";
+import LiquidFlow from "./LiquidFlow";
 import social1 from "@/assets/social-1.jpg";
 import social2 from "@/assets/social-2.jpg";
 import social3 from "@/assets/social-3.jpg";
@@ -82,8 +84,16 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-[#050505]">
-      <div className="divider-gradient mb-16" />
+    <section id="portfolio" className="relative py-20 bg-[#050505] overflow-hidden">
+      <GradientOrbs variant="warm" />
+      <LiquidFlow
+        color1="rgba(251, 146, 60, 0.03)"
+        color2="rgba(244, 114, 182, 0.02)"
+        color3="rgba(139, 92, 246, 0.02)"
+      />
+
+      <div className="relative z-10">
+        <div className="divider-gradient mb-16" />
       <div className="max-w-6xl mx-auto px-6">
         <AnimatedSection>
           <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-orange-400/60 mb-3">
@@ -233,6 +243,7 @@ const PortfolioSection = () => {
           )}
 
         </AnimatePresence>
+      </div>
       </div>
     </section>
   );

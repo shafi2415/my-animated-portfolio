@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Palette, PenTool, Share2, BookOpen, FileSpreadsheet, Monitor } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import GradientOrbs from "./GradientOrbs";
+import LiquidFlow from "./LiquidFlow";
 
 const services = [
   {
@@ -48,8 +50,15 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 bg-[#050505]">
-    <div className="max-w-6xl mx-auto px-6">
+  <section id="services" className="relative py-20 bg-[#050505] overflow-hidden">
+    <GradientOrbs variant="blue" />
+    <LiquidFlow
+      color1="rgba(59, 130, 246, 0.03)"
+      color2="rgba(139, 92, 246, 0.02)"
+      color3="rgba(99, 102, 241, 0.02)"
+    />
+
+    <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>
         <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-blue-400/60 mb-3">
           What I Do

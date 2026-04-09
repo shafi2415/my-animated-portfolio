@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-new.png";
 import TypewriterRoles from "./TypewriterRoles";
+import ParticleField from "./ParticleField";
 
 const HeroSection = () => {
   return (
@@ -20,6 +21,13 @@ const HeroSection = () => {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 to-transparent" />
+
+      {/* Particles floating over hero */}
+      <ParticleField particleCount={30} speed={0.5} opacity={0.15} />
+
+      {/* Ambient gradient glow at bottom */}
+      <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] rounded-full bg-indigo-500/[0.04] blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[400px] h-[250px] rounded-full bg-purple-500/[0.03] blur-[80px] pointer-events-none" />
 
       {/* Content at bottom */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-16">

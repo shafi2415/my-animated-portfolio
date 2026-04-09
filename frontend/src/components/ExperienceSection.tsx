@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import GradientOrbs from "./GradientOrbs";
+import LiquidFlow from "./LiquidFlow";
 
 const experiences = [
   {
@@ -35,8 +37,15 @@ const experiences = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-20 bg-[#050505]">
-    <div className="max-w-6xl mx-auto px-6">
+  <section id="experience" className="relative py-20 bg-[#050505] overflow-hidden">
+    <GradientOrbs variant="cool" />
+    <LiquidFlow
+      color1="rgba(6, 182, 212, 0.03)"
+      color2="rgba(59, 130, 246, 0.02)"
+      color3="rgba(139, 92, 246, 0.02)"
+    />
+
+    <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>
         <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-cyan-400/60 mb-3">
           Career

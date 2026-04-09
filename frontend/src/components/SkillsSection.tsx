@@ -11,6 +11,8 @@ import {
   MonitorSmartphone,
 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import LiquidFlow from "./LiquidFlow";
+import ParticleField from "./ParticleField";
 
 const skills = [
   { icon: Palette, title: "Adobe Creative Suite", desc: "Photoshop, Illustrator, InDesign", color: "text-blue-400", bg: "bg-blue-500/10" },
@@ -25,8 +27,15 @@ const skills = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-20 bg-[#050505]">
-    <div className="max-w-6xl mx-auto px-6">
+  <section id="skills" className="relative py-20 bg-[#050505] overflow-hidden">
+    <LiquidFlow
+      color1="rgba(52, 211, 153, 0.03)"
+      color2="rgba(6, 182, 212, 0.02)"
+      color3="rgba(99, 102, 241, 0.02)"
+    />
+    <ParticleField particleCount={15} speed={0.25} opacity={0.08} />
+
+    <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>
         <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-emerald-400/60 mb-3">
           Capabilities
