@@ -35,17 +35,23 @@ const HeroSection = () => {
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6"
           >
             Mohammed Shafi{" "}
-            <span className="text-primary">Hudawi</span>
+            <span className="text-primary">TP</span>
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-primary/80 font-display text-base sm:text-lg mb-4"
+          >
+            Graphic Designer | IT & AI Instructor | Curriculum Developer
+          </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-foreground/70 text-lg leading-relaxed mb-8 max-w-lg"
           >
-            Experienced graphic designer and IT coordinator. Proficient in Adobe
-            Creative Suite. Committed to delivering high-quality work. Adapts
-            quickly to trends and technologies.
+            Graphic Designer, IT/AI instructor, and curriculum developer who turns complex tools into simple, practical skills. Founder of Sha Creatives, with 50+ branding projects delivered.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,7 +84,7 @@ const HeroSection = () => {
             <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full border-2 border-gold p-1">
               <img
                 src={profileImg}
-                alt="Mohammed Shafi Hudawi"
+                alt="Mohammed Shafi TP"
                 className="w-full h-full rounded-full object-cover"
                 width={384}
                 height={384}

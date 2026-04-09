@@ -1,21 +1,36 @@
-import { Code, Palette, PenTool } from "lucide-react";
+import { Palette, PenTool, Share2, BookOpen, FileSpreadsheet, Monitor } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const services = [
   {
-    icon: Code,
-    title: "Web Development",
-    desc: "Responsive, user-friendly websites and applications using modern technologies.",
-  },
-  {
     icon: Palette,
     title: "Graphic Design",
-    desc: "Eye-catching visual content creation for social media, print, and web.",
+    desc: "Eye-catching visual content for social media, print, and digital platforms using Adobe Creative Suite.",
   },
   {
     icon: PenTool,
-    title: "Logo Design",
-    desc: "Unique and memorable brand marks representing your brand identity.",
+    title: "Logo & Branding",
+    desc: "Unique brand identities with custom logos, visual guidelines, and cohesive brand presence.",
+  },
+  {
+    icon: Share2,
+    title: "Social Media Branding",
+    desc: "Complete social media visual strategies that boost engagement and strengthen digital presence.",
+  },
+  {
+    icon: BookOpen,
+    title: "IT & AI Training",
+    desc: "Practical instruction in Adobe tools, AI automation, and IT fundamentals for students and professionals.",
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "Excel Automation",
+    desc: "Custom Excel solutions and data analysis tools that save time and reduce errors by up to 30%.",
+  },
+  {
+    icon: Monitor,
+    title: "Curriculum Development",
+    desc: "Comprehensive IT syllabus design and e-learning implementation aligned with industry standards.",
   },
 ];
 
@@ -27,9 +42,8 @@ const ServicesSection = () => (
           My Services
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-16">
-          Specializing in web development, graphic design, and logo design, I
-          offer a comprehensive suite of services to enhance your brand and
-          online presence.
+          From creative design to IT education and automation, I offer a
+          comprehensive suite of services to help you grow.
         </p>
       </AnimatedSection>
 

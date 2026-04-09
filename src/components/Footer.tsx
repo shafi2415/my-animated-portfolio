@@ -4,7 +4,7 @@ const Footer = () => (
       <p className="text-muted-foreground text-sm">
         © {new Date().getFullYear()}{" "}
         <span className="font-display font-medium text-primary">
-          Mohammed Shafi Hudawi
+          Mohammed Shafi TP
         </span>
         . All rights reserved.
       </p>

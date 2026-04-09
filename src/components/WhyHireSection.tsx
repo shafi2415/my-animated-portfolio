@@ -1,21 +1,26 @@
-import { Sparkles, TrendingUp, Zap } from "lucide-react";
+import { Sparkles, TrendingUp, Zap, Users } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const reasons = [
   {
     icon: Sparkles,
-    title: "Proven Expertise",
-    desc: "Increased design efficiency by 50% through streamlined workflows.",
+    title: "50+ Projects Delivered",
+    desc: "Successfully delivered over 50 branding projects including logos, posters, and social campaigns with exceptional client satisfaction.",
   },
   {
     icon: TrendingUp,
-    title: "Consistent Success",
-    desc: "Successfully delivered over 30 projects with exceptional client satisfaction.",
+    title: "70% Engagement Growth",
+    desc: "Designed campus marketing materials that boosted digital engagement by approximately 70%.",
   },
   {
     icon: Zap,
-    title: "Versatile Skill Set",
-    desc: "Expert in Adobe Creative Suite, data analysis with Excel, and effective team leadership.",
+    title: "Automation Expert",
+    desc: "Built Excel automation tools that cut processing time by 30% and minimize errors in data workflows.",
+  },
+  {
+    icon: Users,
+    title: "69 Colleges Impact",
+    desc: "Spearheading IT education modernization across 69 affiliated colleges as curriculum developer.",
   },
 ];
 
@@ -28,10 +33,10 @@ const WhyHireSection = () => (
         </h2>
       </AnimatedSection>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {reasons.map((r, i) => (
           <AnimatedSection key={r.title} delay={i * 0.15}>
-            <div className="flex gap-4 items-start">
+            <div className="flex flex-col gap-4 items-start">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <r.icon className="w-6 h-6 text-primary" />
               </div>

@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const ContactSection = () => (
@@ -10,12 +10,12 @@ const ContactSection = () => (
         </h2>
         <p className="text-foreground/70 max-w-xl text-lg leading-relaxed mb-12">
           Bringing creativity and efficiency to every project! Expertise in
-          design, automation, and content development. Ready to collaborate and
+          design, IT education, automation, and curriculum development. Ready to collaborate and
           create impactful solutions.
         </p>
       </AnimatedSection>
 
-      <div className="flex flex-col sm:flex-row gap-8">
+      <div className="flex flex-col sm:flex-row gap-8 flex-wrap">
         <AnimatedSection delay={0.15}>
           <a
             href="https://wa.me/917994724015"
@@ -37,7 +37,7 @@ const ContactSection = () => (
 
         <AnimatedSection delay={0.3}>
           <a
-            href="mailto:shafisayd2415@gmail.com"
+            href="mailto:mshafisyd@gmail.com"
             className="flex items-center gap-4 bg-card/50 border border-border/50 rounded-2xl px-8 py-6 hover:border-primary/40 transition-colors group"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -46,10 +46,24 @@ const ContactSection = () => (
             <div>
               <p className="text-muted-foreground text-xs mb-1">Email</p>
               <p className="font-display font-semibold text-foreground">
-                shafisayd2415@gmail.com
+                mshafisyd@gmail.com
               </p>
             </div>
           </a>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.45}>
+          <div className="flex items-center gap-4 bg-card/50 border border-border/50 rounded-2xl px-8 py-6 group">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <MapPin className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <p className="text-muted-foreground text-xs mb-1">Location</p>
+              <p className="font-display font-semibold text-foreground">
+                Areekode, Malappuram, Kerala
+              </p>
+            </div>
+          </div>
         </AnimatedSection>
       </div>
     </div>

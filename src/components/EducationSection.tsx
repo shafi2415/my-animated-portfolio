@@ -3,19 +3,19 @@ import AnimatedSection from "./AnimatedSection";
 
 const education = [
   {
-    degree: "Diploma in Graphic Designing",
-    school: "DigiNet Online School",
-    period: "02/2025 – Present",
+    degree: "Diploma in Graphic Design",
+    school: "Diginet Online School",
+    period: "January 2025 – June 2025",
   },
   {
-    degree: "Master's Degree",
+    degree: "Master of Arts (MA)",
     school: "Darul Huda Islamic University",
-    period: "04/2021 – 03/2023",
+    period: "April 2021 – March 2023",
   },
   {
-    degree: "Bachelor of Arts",
+    degree: "Bachelor of Arts (BA)",
     school: "University of Calicut",
-    period: "04/2019 – 03/2022",
+    period: "April 2019 – March 2022",
   },
 ];
 
