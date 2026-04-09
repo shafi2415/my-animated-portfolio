@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import ParticleField from "./ParticleField";
+import RainEffect from "./RainEffect";
 
 const stats = [
   { number: "50+", label: "Projects Delivered", color: "gradient-text" },
@@ -10,8 +11,15 @@ const stats = [
 ];
 
 const WhyHireSection = () => (
-  <section className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #0a080e 50%, #050505 100%)",
+    }}
+  >
     <ParticleField particleCount={20} speed={0.3} opacity={0.1} />
+    <RainEffect intensity={30} speed={0.5} />
 
     <div className="relative z-10">
       <div className="divider-gradient" />

@@ -13,6 +13,7 @@ import {
 import AnimatedSection from "./AnimatedSection";
 import LiquidFlow from "./LiquidFlow";
 import ParticleField from "./ParticleField";
+import RainEffect from "./RainEffect";
 
 const skills = [
   { icon: Palette, title: "Adobe Creative Suite", desc: "Photoshop, Illustrator, InDesign", color: "text-blue-400", bg: "bg-blue-500/10" },
@@ -27,13 +28,21 @@ const skills = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    id="skills"
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #060b0a 30%, #070d0c 60%, #050505 100%)",
+    }}
+  >
     <LiquidFlow
       color1="rgba(52, 211, 153, 0.03)"
       color2="rgba(6, 182, 212, 0.02)"
       color3="rgba(99, 102, 241, 0.02)"
     />
     <ParticleField particleCount={15} speed={0.25} opacity={0.08} />
+    <RainEffect intensity={40} speed={0.6} />
 
     <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import GradientOrbs from "./GradientOrbs";
 import LiquidFlow from "./LiquidFlow";
+import RainEffect from "./RainEffect";
 
 const experiences = [
   {
@@ -37,13 +38,21 @@ const experiences = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    id="experience"
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #060a10 30%, #070d14 60%, #050505 100%)",
+    }}
+  >
     <GradientOrbs variant="cool" />
     <LiquidFlow
       color1="rgba(6, 182, 212, 0.03)"
       color2="rgba(59, 130, 246, 0.02)"
       color3="rgba(139, 92, 246, 0.02)"
     />
+    <RainEffect intensity={60} speed={0.8} />
 
     <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>

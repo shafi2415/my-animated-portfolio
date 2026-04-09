@@ -3,11 +3,20 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import GradientOrbs from "./GradientOrbs";
 import ParticleField from "./ParticleField";
+import RainEffect from "./RainEffect";
 
 const ContactSection = () => (
-  <section id="contact" className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    id="contact"
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #070810 30%, #080a14 60%, #050505 100%)",
+    }}
+  >
     <GradientOrbs variant="blue" />
     <ParticleField particleCount={25} speed={0.4} opacity={0.12} />
+    <RainEffect intensity={45} speed={0.7} />
 
     <div className="relative z-10">
       <div className="divider-gradient mb-16" />

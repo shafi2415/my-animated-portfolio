@@ -3,6 +3,7 @@ import { Palette, PenTool, Share2, BookOpen, FileSpreadsheet, Monitor } from "lu
 import AnimatedSection from "./AnimatedSection";
 import GradientOrbs from "./GradientOrbs";
 import LiquidFlow from "./LiquidFlow";
+import RainEffect from "./RainEffect";
 
 const services = [
   {
@@ -50,13 +51,21 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    id="services"
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #070a12 30%, #060d14 60%, #050505 100%)",
+    }}
+  >
     <GradientOrbs variant="blue" />
     <LiquidFlow
       color1="rgba(59, 130, 246, 0.03)"
       color2="rgba(139, 92, 246, 0.02)"
       color3="rgba(99, 102, 241, 0.02)"
     />
+    <RainEffect intensity={50} speed={0.7} />
 
     <div className="relative z-10 max-w-6xl mx-auto px-6">
       <AnimatedSection>

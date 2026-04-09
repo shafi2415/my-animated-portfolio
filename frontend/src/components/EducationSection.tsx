@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import GradientOrbs from "./GradientOrbs";
+import RainEffect from "./RainEffect";
 
 const education = [
   {
@@ -28,8 +29,15 @@ const education = [
 ];
 
 const EducationSection = () => (
-  <section className="relative py-20 bg-[#050505] overflow-hidden">
+  <section
+    className="relative py-20 overflow-hidden"
+    style={{
+      background:
+        "linear-gradient(180deg, #050505 0%, #0a0710 30%, #0c0914 60%, #050505 100%)",
+    }}
+  >
     <GradientOrbs variant="purple" />
+    <RainEffect intensity={35} speed={0.6} />
 
     <div className="relative z-10">
       <div className="divider-gradient mb-16" />
