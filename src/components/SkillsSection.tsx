@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import {
   Palette,
   FileSpreadsheet,
-  Code,
   Globe,
   Video,
-  Database,
+  Cpu,
+  BookOpen,
+  PenTool,
+  Sparkles,
+  MonitorSmartphone,
 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
@@ -16,29 +19,44 @@ const skills = [
     desc: "Photoshop, Illustrator, InDesign",
   },
   {
+    icon: PenTool,
+    title: "Canva & Figma",
+    desc: "Modern design & prototyping tools",
+  },
+  {
     icon: FileSpreadsheet,
-    title: "Microsoft Excel",
-    desc: "Data analysis, spreadsheet management",
+    title: "Advanced Microsoft Excel",
+    desc: "Automation, data analysis, spreadsheets",
   },
   {
-    icon: Code,
-    title: "HTML / CSS",
-    desc: "Web development and design",
-  },
-  {
-    icon: Globe,
-    title: "Languages",
-    desc: "English, Arabic, Malayalam",
+    icon: MonitorSmartphone,
+    title: "Microsoft Word / PowerPoint",
+    desc: "Professional documents & presentations",
   },
   {
     icon: Video,
     title: "Video Editing",
-    desc: "Final Cut Pro, Adobe Premiere",
+    desc: "Video production & post-processing",
   },
   {
-    icon: Database,
-    title: "Database Management",
-    desc: "MySQL, SQL Server",
+    icon: Sparkles,
+    title: "Social Media Branding",
+    desc: "Visual identity & content strategy",
+  },
+  {
+    icon: Cpu,
+    title: "Hardware & AI Tools",
+    desc: "PC maintenance & AI-powered workflows",
+  },
+  {
+    icon: BookOpen,
+    title: "Curriculum Development",
+    desc: "E-learning & classroom instruction",
+  },
+  {
+    icon: Globe,
+    title: "Languages",
+    desc: "Malayalam, English, Arabic, Urdu",
   },
 ];
 
@@ -50,7 +68,7 @@ const SkillsSection = () => (
           My Skills
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-16">
-          Versatile skills in design, technology, and languages.
+          Versatile skills in design, technology, education, and languages.
         </p>
       </AnimatedSection>
 
