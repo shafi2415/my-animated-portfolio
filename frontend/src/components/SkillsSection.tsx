@@ -13,80 +13,45 @@ import {
 import AnimatedSection from "./AnimatedSection";
 
 const skills = [
-  {
-    icon: Palette,
-    title: "Adobe Creative Suite",
-    desc: "Photoshop, Illustrator, InDesign",
-  },
-  {
-    icon: PenTool,
-    title: "Canva & Figma",
-    desc: "Modern design & prototyping tools",
-  },
-  {
-    icon: FileSpreadsheet,
-    title: "Advanced Microsoft Excel",
-    desc: "Automation, data analysis, spreadsheets",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Microsoft Word / PowerPoint",
-    desc: "Professional documents & presentations",
-  },
-  {
-    icon: Video,
-    title: "Video Editing",
-    desc: "Video production & post-processing",
-  },
-  {
-    icon: Sparkles,
-    title: "Social Media Branding",
-    desc: "Visual identity & content strategy",
-  },
-  {
-    icon: Cpu,
-    title: "Hardware & AI Tools",
-    desc: "PC maintenance & AI-powered workflows",
-  },
-  {
-    icon: BookOpen,
-    title: "Curriculum Development",
-    desc: "E-learning & classroom instruction",
-  },
-  {
-    icon: Globe,
-    title: "Languages",
-    desc: "Malayalam, English, Arabic, Urdu",
-  },
+  { icon: Palette, title: "Adobe Creative Suite", desc: "Photoshop, Illustrator, InDesign" },
+  { icon: PenTool, title: "Canva & Figma", desc: "Design & prototyping" },
+  { icon: FileSpreadsheet, title: "Advanced Excel", desc: "Automation & data analysis" },
+  { icon: MonitorSmartphone, title: "Word / PowerPoint", desc: "Documents & presentations" },
+  { icon: Video, title: "Video Editing", desc: "Production & post-processing" },
+  { icon: Sparkles, title: "Social Media", desc: "Visual identity & strategy" },
+  { icon: Cpu, title: "Hardware & AI", desc: "PC maintenance & AI workflows" },
+  { icon: BookOpen, title: "Curriculum Dev", desc: "E-learning & instruction" },
+  { icon: Globe, title: "Languages", desc: "Malayalam, English, Arabic, Urdu" },
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-24 bg-card/30">
-    <div className="max-w-7xl mx-auto px-6">
+  <section id="skills" className="py-20 bg-[#050505]">
+    <div className="max-w-6xl mx-auto px-6">
       <AnimatedSection>
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-          My Skills
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mb-16">
-          Versatile skills in design, technology, education, and languages.
+        <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/25 mb-3">
+          Capabilities
         </p>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter text-white mb-14">
+          Skills & Tools
+        </h2>
       </AnimatedSection>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {skills.map((skill, i) => (
-          <AnimatedSection key={skill.title} delay={i * 0.1}>
+          <AnimatedSection key={skill.title} delay={i * 0.05}>
             <motion.div
-              whileHover={{ y: -4 }}
-              className="bg-card/50 border border-border/50 rounded-2xl p-6 flex items-start gap-4 hover:border-primary/30 transition-colors"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+              className="group glass rounded-xl p-5 flex items-center gap-4 hover:bg-white/[0.05] transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                <skill.icon className="w-6 h-6 text-primary" />
+              <div className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 group-hover:bg-white/[0.1] transition-colors">
+                <skill.icon className="w-4 h-4 text-white/50" />
               </div>
               <div>
-                <h3 className="font-display font-semibold text-foreground mb-1">
+                <h3 className="font-medium text-white text-sm tracking-tight">
                   {skill.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{skill.desc}</p>
+                <p className="text-white/25 text-xs font-light">{skill.desc}</p>
               </div>
             </motion.div>
           </AnimatedSection>

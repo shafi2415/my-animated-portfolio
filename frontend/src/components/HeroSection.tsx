@@ -1,101 +1,67 @@
 import { motion } from "framer-motion";
-import profileImg from "@/assets/profile.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroImg from "@/assets/hero-new.png";
+import TypewriterRoles from "./TypewriterRoles";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-end overflow-hidden"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      <div className="absolute inset-0 bg-background/70" />
+      {/* Full background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImg}
+          alt="Mohammed Shafi TP"
+          className="w-full h-full object-cover object-[center_20%]"
+        />
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center">
+      {/* Gradient overlays for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/40 to-transparent" />
+
+      {/* Content at bottom */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-16">
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
         >
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-primary font-display font-medium text-lg mb-2"
-          >
-            Portfolio
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6"
-          >
-            Mohammed Shafi{" "}
-            <span className="text-primary">TP</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-primary/80 font-display text-base sm:text-lg mb-4"
-          >
-            Graphic Designer | IT & AI Instructor | Curriculum Developer
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-foreground/70 text-lg leading-relaxed mb-8 max-w-lg"
-          >
-            Graphic Designer, IT/AI instructor, and curriculum developer who turns complex tools into simple, practical skills. Founder of Sha Creatives, with 50+ branding projects delivered.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex gap-4"
-          >
-            <a
-              href="#contact"
-              className="px-8 py-3 rounded-lg gradient-gold text-primary-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              Get In Touch
-            </a>
-            <a
-              href="#portfolio"
-              className="px-8 py-3 rounded-lg border border-primary/40 text-primary font-display font-semibold text-sm hover:bg-primary/10 transition-colors"
-            >
-              View Work
-            </a>
-          </motion.div>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-4">
+            Mohammed<br />Shafi <span className="text-white/50">TP</span>
+          </h1>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7, ease: [0.23, 1, 0.32, 1] }}
+          className="mb-6"
         >
-          <div className="relative">
-            <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full border-2 border-gold p-1">
-              <img
-                src={profileImg}
-                alt="Mohammed Shafi TP"
-                className="w-full h-full rounded-full object-cover"
-                width={384}
-                height={384}
-              />
-            </div>
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-4 rounded-full border border-primary/20 border-dashed"
-            />
-          </div>
+          <p className="text-lg sm:text-xl font-light tracking-tight h-8">
+            <TypewriterRoles />
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0, ease: [0.23, 1, 0.32, 1] }}
+          className="flex items-center gap-3"
+        >
+          <a
+            href="#contact"
+            className="px-6 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all duration-300"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="#portfolio"
+            className="px-6 py-2.5 rounded-full text-sm font-medium text-white/60 border border-white/15 hover:border-white/30 hover:text-white transition-all duration-300"
+          >
+            View Work
+          </a>
         </motion.div>
       </div>
     </section>
